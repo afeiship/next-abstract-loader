@@ -12,7 +12,8 @@
   <script src="../src/next-abstract-loader.js"></script>
 
   <script>
-    var _loader = new nx.AbstractLoader();
+    var _loader = new nx.AbstractLoader({ timeout: 10000 });
+
     _loader.load('https://cdn.bootcss.com/zepto/1.2.0/zepto.js')
     .then(resp=>{
       console.log(resp)
